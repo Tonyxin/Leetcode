@@ -32,7 +32,7 @@ private:
 			return;
 		}
 		if (left_backets>0)
-			InsertBackets(result, str + "(", left_backets - 1, right_backets + 1);
+			InsertBackets(result, str + "(", left_backets - 1, right_backets + 1);				//注意这里是-1，而不是--，要保证本递归层次上left_backets与right_backets值不变
 		if (right_backets>0)
 			InsertBackets(result, str + ")", left_backets, right_backets - 1);
 	}
